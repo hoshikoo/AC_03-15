@@ -10,23 +10,20 @@ public class StringBox {
         }
 
         public static void stringBox(String text){
-            String startEnd = "+";
-            System.out.print(startEnd);
 
-            for(int i=0; i<text.length()+2;i++){
-                System.out.print("-");
-            }
+            System.out.println("+" + repeat('-', text.length() + 2) + "+");
+            System.out.println("| " + text + " |");
+            System.out.println("+" +repeat('-',text.length()+2)+"+");
 
-            System.out.print(startEnd);
-            System.out.println();
-
-            System.out.println("| "+text+" |");
-
-            System.out.print(startEnd);
-
-            for(int i=0; i<text.length()+2;i++){
-                System.out.print("-");
-            }
-            System.out.print(startEnd);
         }
+
+
+        public static String repeat(char c, int count) {
+            String result = "";
+            for (int i = 0; i < count; ++i) {
+                result += c;
+            }
+            return result;
+        }
+
 }
